@@ -10,9 +10,9 @@ import (
 )
 
 type MetaTag struct {
-	Title       string
-	Description string
-	Keywords    []string
+	Title       string   `json:"title"`
+	Description string   `json:"description"`
+	Keywords    []string `json:"keywords"`
 }
 
 func Parse(ctx context.Context, r io.Reader) (MetaTag, error) {
